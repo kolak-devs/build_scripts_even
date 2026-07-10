@@ -26,6 +26,7 @@ export BUILD_HOSTNAME=crave
 echo "======= Export Done ======"
 
 # Set up build environment
+. build/envsetup.sh
 
 # Lunch
 lunch infinity_even-bp4a-user
