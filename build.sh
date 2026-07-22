@@ -3,13 +3,13 @@
 rm -rf .repo/local_manifests/
 
 # repo init rom
-repo init -u https://github.com/ProjectInfinity-X/manifest -b 16 --git-lfs --depth=1
+repo init -u https://github.com/The-Clover-Project/manifest.git -b 16-qpr2 --git-lfs --depth=1
 echo "=================="
 echo "Repo init success"
 echo "=================="
 
 # Local manifests
-git clone --depth=1 https://github.com/kolak-devs/even-manifests.git .repo/local_manifests -b sixteen-qpr2 
+git clone --depth=1 https://github.com/kolak-devs/even-manifests.git .repo/local_manifests -b sixteen/dev
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
@@ -26,13 +26,13 @@ export BUILD_HOSTNAME=crave
 echo "======= Export Done ======"
 
 # Set up build environment
-. build/envsetup.sh
+source build/envsetup.sh
 
 # Lunch
-lunch infinity_even-bp4a-user
+lunch clover_even-bp4a-user
 
 # Build
-m bacon
+mka clover
 
 # Copy imgs to a separate folder for easy download
 mkdir -p my_output
