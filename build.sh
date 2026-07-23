@@ -3,7 +3,7 @@
 rm -rf .repo/local_manifests/
 
 # repo init rom
-repo init -u https://github.com/DerpFest-AOSP/android_manifest.git -b 16.2 --git-lfs --depth=1
+repo init -u https://github.com/crdroidandroid/android.git -b 16.0 --git-lfs --no-clone-bundle --depth=1
 echo "=================="
 echo "Repo init success"
 echo "=================="
@@ -26,13 +26,13 @@ export BUILD_HOSTNAME=crave
 echo "======= Export Done ======"
 
 # Set up build environment
-source build/envsetup.sh
+. build/envsetup.sh
 
 # Lunch
-lunch lineage_even-bp4a-user
+brunch even user
 
 # Build
-mka derp
+mka bacon
 
 # Copy imgs to a separate folder for easy download
 mkdir -p my_output
