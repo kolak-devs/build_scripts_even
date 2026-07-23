@@ -31,6 +31,9 @@ echo "======= Export Done ======"
 # Lunch
 brunch even user
 
+# installclean
+make installclean
+
 # Build
 mka bacon
 
