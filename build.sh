@@ -23,6 +23,8 @@ echo "============="
 # Export
 export BUILD_USERNAME=ismasrull 
 export BUILD_HOSTNAME=crave
+export WITH_GMS=true
+export DEVICE_MAINTAINER=ismasrull
 echo "======= Export Done ======"
 
 # Set up build environment
