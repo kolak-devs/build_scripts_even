@@ -3,7 +3,7 @@
 rm -rf .repo/local_manifests/
 
 # repo init rom
-repo init -u https://github.com/The-Clover-Project/manifest.git -b 16-qpr2 --git-lfs --depth=1
+repo init -u https://github.com/DerpFest-AOSP/android_manifest.git -b 16.2 --git-lfs --depth=1
 echo "=================="
 echo "Repo init success"
 echo "=================="
@@ -29,10 +29,10 @@ echo "======= Export Done ======"
 source build/envsetup.sh
 
 # Lunch
-lunch clover_even-bp4a-user
+lunch lineage_even-bp4a-user
 
 # Build
-mka clover
+mka derp
 
 # Copy imgs to a separate folder for easy download
 mkdir -p my_output
